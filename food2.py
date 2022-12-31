@@ -23,12 +23,9 @@ def upload():
         f = request.files['file']
         file_path = secure_filename(f.filename)
         f.save(file_path)
-        # Make prediction
+        # Identify image
         result = load_image(file_path)
         result = result.title()
-        #d = {"Ice Cream":"🍨",'Fried Rice':"🍚","Pizza":"🍕","Sandwich":"🥪","Samosa":"🌭"}
-        #result = result+d[result]
-        print(result)
 
         ingredient_name = result.lower().replace(" ","%20")
         ingrdts = requests.get("https://www.themealdb.com/api/json/v1/1/filter.php?i="+ingredient_name)
@@ -43,10 +40,7 @@ def upload():
                 continue
             recipe = recipe + recform["meals"][0]["strIngredient"+str(i)] + " (" + recform["meals"][0]["strMeasure"+str(i)] + ")<br>"
         recipe = recipe + "<hr><h3 style='border:white 3px solid'><b class='fs-2'><i>Recipe</i></b> : </h3><br>" + recform["meals"][0]["strInstructions"]
-        print(file_path)
-        print(recipe)
         os.remove(file_path)
-        print(recipe)
         return recipe
     return None
 

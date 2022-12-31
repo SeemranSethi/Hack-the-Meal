@@ -1,8 +1,6 @@
 $(document).ready(function () {
     // Init
-    //$('.imagePreview').hide();
     $('.loader').hide();
-    //$('#result').hide();
 
     // Upload Preview
     function readURL(input) {
@@ -10,26 +8,20 @@ $(document).ready(function () {
             var reader = new FileReader();
             reader.onload = function (e) {
                 $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
-                //$('#imagePreview').hide();
-                //$('#imagePreview').fadeIn(650);
             }
             reader.readAsDataURL(input.files[0]);
         }
     }
     $("#imageUpload").change(function () {
-        //$('.image-section').show();
-        //$('#btn-predict').show();
         $('#result').text('');
-        //$('#result').hide();
         readURL(this);
     });
 
-    // Predict
+    // Predict image
     $('#btn-predict').click(function () {
         var form_data = new FormData($('#upload-file')[0]);
 
         // Show loading animation
-        //$(this).hide();
         $('.loader').show();
 
         // Make prediction by calling api /predict
@@ -44,7 +36,6 @@ $(document).ready(function () {
             success: function (data) {
                 // Get and display the result
                 $('.loader').hide();
-                //$('#result').fadeIn(600);
                 $('#result').html(data);
                 console.log('Success!');
             }
