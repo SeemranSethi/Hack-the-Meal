@@ -1,0 +1,64 @@
+{% extends "base.html" %} {% block content %}
+
+<style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #2dcba7;
+        color: black;
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+    }
+</style>
+
+<div>
+    <section id="section-2" class="container-fluid ">
+        <br><br><br><br><br><br><br>
+        <div class="container d-flex   justify-content-evenly ">
+            <img src="../static/images/girl2.gif" alt="img not found" class="image-fluid">
+
+            <span class="container d-flex justify-content-center flex-column align-items-center">
+                <form id="upload-file" method="post" enctype="multipart/form-data">
+                    <label for="imageUpload" class="upload-label">
+                        Choose Food...
+                    </label>
+                    <input type="file" class="fs-4 p-2 rounded" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+                </form>
+                <center>
+                    <div class="image-section">
+                        <div class="img-preview">
+                            <div id="imagePreview">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-lg fs-3" id="btn-predict">Generate Recipe</button>
+                        </div>
+                    </div>
+                </center>
+            </span>
+        </div>
+
+    </section>
+    <hr>
+
+    <section id="section-3" class="container-fluid pt-5">
+
+        <h2 class="text-center pt-5 fs-1"> <u>RECIPE</u><br></h2>
+        <br><br><br>
+        <center>
+            <div class="loader" style="display:none; margin: auto;"></div>
+        </center>
+        <div class="container d-flex justify-content-center text-center">
+            <h4 id="result">
+                <span></span>
+            </h4>
+        </div>
+
+    </section>
+
+</div>
+
+{% endblock %}
