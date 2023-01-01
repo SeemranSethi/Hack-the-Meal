@@ -39,6 +39,7 @@ The website allows the user to commence with uploading a photo of any leftover f
 <a href="https://github.com/404"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
 
 ## Try out links
+<a href='https://youtu.be/duzdTIu2QIs'> Demo</a>
 
 <a href="https://github.com/404"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
 
