@@ -55,7 +55,8 @@ py food2.py
 <a href="https://github.com/404"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
 
 ## Try out links
-### <a href='https://youtu.be/duzdTIu2QIs'> Demo</a>
+<img title="YouTube" height="40px" src="https://img.icons8.com/color/512/youtube-play.png"/> &nbsp;&nbsp;&nbsp;
+### <a href='https://youtu.be/duzdTIu2QIs'>: Demo</a>
 
 <a href="https://github.com/404"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
 
